@@ -4,22 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Prestige City - Sarjapur</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons for the features -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     
-    <!-- Link to the custom CSS file -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Tailwind Config for Custom Colors (must be in a script tag) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+                        'primary-red': '#e31e31',
                         'primary-gold': '#d8c282',
-                        'dark-card': 'rgba(29, 29, 29, 0.9)', 
+                        'dark-card': 'rgba(29, 29, 29, 0.95)', 
+                        'button-bg-dark': 'rgba(29, 29, 29, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+<header class=" absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-20">
+        <div class="bg-white rounded-br-lg shadow-lg px-3 py-2">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Prestige_Group.svg" alt="Prestige Group Logo" class="h-16 object-contain">
+        </div>
+        <button class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+    </header>
+    
+<!-- 1. HOME PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prestige City - Sarjapur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#e31e31',
+                        'primary-gold': '#d8c282',
+                        'dark-card': 'rgba(29, 29, 29, 0.95)', 
+                        'button-bg-dark': 'rgba(29, 29, 29, 0.7)',
                     }
                 }
             }
@@ -28,291 +69,395 @@
 </head>
 <body class="bg-gray-100 min-h-screen">
 
-    <!-- The Hero Content is modularized in Hero_Content.html. -->
-    <!-- In a real environment, you would use server-side includes or JavaScript to load this content here. -->
-    <!-- For this environment, we include the content directly below for demonstration purposes. -->
-    <!-- NOTE: If you were to run this as separate files, you would use a method like fetch() to load the HTML file here. -->
-
-    <!-- HERO SECTION (Content from Hero_Content.html) -->
-    <div class="hero-background">
-        <div class="overlay"></div>
-
-        <!-- Absolute Header Bar (Mobile Focus) -->
-        <header class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-20">
-            <!-- Logo Container -->
-            <div class="h-10 w-24 md:h-12 md:w-32 bg-white rounded-br-lg shadow-xl p-1 flex items-center justify-center">
-                <span class="text-xs font-bold text-gray-800 tracking-tight">Prestige GROUP</span>
-            </div>
-            <!-- Hamburger Menu Icon -->
-            <button class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-        </header>
-
-        <!-- Pre-Launch Tag -->
-        <div class="absolute top-1/4 right-0 transform -translate-y-1/2 rotate-90 origin-bottom-right bg-red-600 text-white text-xs font-bold py-2 px-6 shadow-2xl z-20 rounded-t-lg">
-            PRE-LAUNCH
+<!-- 1. HOME PAGE -->
+<div class="hero-background">
+    <div class="overlay"></div>
+    
+    <header class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-20">
+        <div class="bg-white rounded-br-lg shadow-lg px-3 py-2">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Prestige_Group.svg" alt="Prestige Group Logo" class="h-16 object-contain">
         </div>
+        <button class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+    </header>
 
-        <!-- Main Content Card Container -->
-        <main class="w-11/12 max-w-lg mx-auto z-10 p-4 sm:p-6 lg:p-8 mt-24 sm:mt-0">
-            <!-- Project Title Section -->
-            <div class="text-white mb-6">
-                <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">The Prestige City</h1>
-                <h2 class="text-xl sm:text-2xl font-light opacity-80 mt-1">Sarjapur</h2>
-                <div class="w-20 h-1 bg-primary-gold mt-4 rounded"></div>
-            </div>
+    <!-- PRE-LAUNCH Badge -->
+    
+    
+    <!-- Main Content - Added proper top padding -->
+    <main class="relative z-10 px-4 pt-64 pb-2 min-h-screen">
+        <div class="w-full max-w-md mx-auto pt-16">
+            
+            <!-- DARK GRAY CARD with Title INSIDE -->
+            <div class="bg-[#271f1a] bg-opacity-90 rounded-3xl p-8 mb-6">
+                
+                <!-- Title Section INSIDE Card -->
+                <div class="text-white mb-8">
+                    <h1 class="text-4xl font-bold leading-tight mb-1">The Prestige City</h1>
+                    <h2 class="text-xl font-normal mb-4">Sarjapur</h2>
+                    <div class="w-full h-px bg-white opacity-30"></div>
+                </div>
 
-            <!-- Features Grid Card -->
-            <div class="bg-dark-card backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-2xl space-y-6">
-                <div class="grid grid-cols-2 gap-x-4 gap-y-6">
-                    <!-- Feature 1: Township -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5l9-7 9 7"/><path d="M9 22V12h6v10"/><path d="M12 2v7"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Township</p>
-                            <p class="text-lg font-semibold text-white">180 Acres</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 2: Units -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V4"/><path d="M10 9h4"/><path d="M10 15h4"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Units</p>
-                            <p class="text-lg font-semibold text-white">650</p>
-                        </div>
-                    </div>
+                <!-- Grid Layout -->
+                <div class="space-y-8 mb-8 mt-6">
                     
-                    <!-- Feature 3: Tower -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V10h16v12"/><path d="M10 10v4"/><path d="M14 10v4"/><path d="M8 6h8"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Tower</p>
-                            <p class="text-lg font-semibold text-white">G + 30 Floors</p>
+                    <!-- Row 1: Township & Units -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Township -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                            <div>
+                                <p class="text-md font-bold text-white mb-0.5">Township</p>
+                                <p class="text-md  text-white leading-tight">180 Acres</p>
+                            </div>
+                        </div>
+
+                        <!-- Units -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"/>
+                                <rect x="14" y="3" width="7" height="7"/>
+                                <rect x="14" y="14" width="7" height="7"/>
+                                <rect x="3" y="14" width="7" height="7"/>
+                            </svg>
+                            <div>
+                                <p class="text-xl text-white font-medium mb-0.5">Units</p>
+                                <p class="text-md  text-white leading-tight">650</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Feature 4: Facilities -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 19l4-4-4-4"/><path d="M10 5l-4 4 4 4"/><path d="M6 15h12"/><path d="M6 9h12"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Facilities</p>
-                            <p class="text-lg font-semibold text-white">40+ Amenities</p>
+                    <!-- Row 2: Tower & Facilities -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Tower -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="6" y="2" width="12" height="20" rx="1"/>
+                                <line x1="9" y1="6" x2="15" y2="6"/>
+                                <line x1="9" y1="10" x2="15" y2="10"/>
+                                <line x1="9" y1="14" x2="15" y2="14"/>
+                                <line x1="9" y1="18" x2="15" y2="18"/>
+                            </svg>
+                            <div>
+                                <p class="text-xl text-white font-medium mb-0.5">Tower</p>
+                                <p class="text-md  text-white leading-tight">G + 30 Floors</p>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            <div>
+                                <p class="text-xl text-white font-medium mb-0.5">Facilities</p>
+                                <p class="text-md  text-white leading-tight">40+ Amenities</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Feature 5: Apartment -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Apartment</p>
-                            <p class="text-lg font-semibold text-white">2, 3 & 4 BHK</p>
+                    <!-- Row 3: Apartment & Open Space -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Apartment -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </svg>
+                            <div>
+                                <p class="text-xl text-white font-medium mb-0.5">Apartment</p>
+                                <p class="text-md text-white leading-tight">2, 3 & 4 BHK</p>
+                            </div>
+                        </div>
+
+                        <!-- Open Space -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary-gold flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-white font-medium mb-0.5">Open Space</p>
+                                <p class="text-md  text-white leading-tight">80%</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Feature 6: Open Space -->
-                    <div class="flex items-start space-x-3">
-                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M10 10v4"/><path d="M14 10v4"/></svg>
-                        <div>
-                            <p class="text-sm font-light text-gray-300">Open Space</p>
-                            <p class="text-lg font-semibold text-white">80%</p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Download Button -->
-                <button onclick="console.log('Download Brochure clicked')" class="w-full py-3 bg-primary-gold hover:bg-yellow-700 transition duration-200 text-gray-900 text-lg font-bold rounded-lg shadow-xl mt-6">
+                <button onclick="console.log('Download Brochure clicked')" class="w-full py-4 bg-[#a68840] text-white text-lg font-bold rounded-xl hover:bg-yellow-600 transition-colors">
                     Download Brochure
                 </button>
             </div>
-            
-            <!-- Pricing Section -->
-            <div class="bg-white p-6 rounded-xl shadow-2xl mt-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left space-y-4 sm:space-y-0">
-                <div>
-                    <p class="text-sm font-light text-gray-600">EOI Amount</p>
-                    <p class="text-xl font-bold text-gray-900">4.5 Lacs</p>
-                </div>
-                <div class="sm:border-l sm:border-gray-300 sm:pl-6 pt-4 sm:pt-0">
-                    <p class="text-sm font-light text-gray-600">Starting Price</p>
-                    <p class="text-xl font-bold text-gray-900">₹ 1.67 Cr*</p>
+
+            <!-- WHITE PRICE CARD -->
+            <div class="bg-white rounded-3xl pb-16 mt-16 ">
+                <div class="flex justify-between items-center pl-4">
+                    <div class = "pl-4">
+                        <p class="text-base font-bold text-gray-900 mb-1 pl-8">EOI Amount</p>
+                        <p class="text-lg text-gray-900 pl-8">4.5 Lacs</p>
+                    </div>
+                    <div class="text-right pr-4">
+                        <p class="text-base font-bold text-gray-900 mb-1 pr-8">Starting Price</p>
+                        <p class="text-lg text-gray-900 pr-16 ">₹1.67 Cr*</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Navigation Buttons -->
-            <div class="flex flex-wrap justify-center sm:justify-between gap-3 mt-6">
-                <button class="flex-1 min-w-[120px] max-w-[48%] py-2 px-3 border border-primary-gold text-primary-gold text-sm font-semibold rounded-lg hover:bg-primary-gold hover:text-gray-900 transition duration-200" onclick="console.log('Floor Plan')">
-                    Floor Plan
-                </button>
-                <button class="flex-1 min-w-[120px] max-w-[48%] py-2 px-3 border border-primary-gold text-primary-gold text-sm font-semibold rounded-lg hover:bg-primary-gold hover:text-gray-900 transition duration-200" onclick="console.log('Location')">
-                    Location
-                </button>
-                <button class="flex-1 min-w-[120px] max-w-[48%] py-2 px-3 border border-primary-gold text-primary-gold text-sm font-semibold rounded-lg hover:bg-primary-gold hover:text-gray-900 transition duration-200" onclick="console.log('Amenities')">
-                    Amenities
-                </button>
-                <button class="flex-1 min-w-[120px] max-w-[48%] py-2 px-3 bg-red-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-200" onclick="console.log('Offers')">
-                    Offers
-                </button>
-            </div>
-        </main>
-    </div>
+<!-- Navigation Buttons -->
+<div class="flex justify-center gap-2 ">
+    <button class="px-5 py-1.5 border border-primary-gold text-sm font-semibold rounded-full whitespace-nowrap bg-white hover:bg-primary-gold transition">
+        Floor Plan
+    </button>
 
-    <!-- EXPERIENCE THE PRESTIGE LIFESTYLE SECTION (Amenities) -->
-    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="amenities-section">
+    <button class="px-5 py-1.5 border border-primary-gold text-sm font-semibold rounded-full whitespace-nowrap bg-white hover:bg-primary-gold transition">
+        Location
+    </button>
+
+    <button class="px-5 py-1.5 border border-primary-gold text-sm font-semibold rounded-full whitespace-nowrap bg-white hover:bg-primary-gold transition">
+        Amenities
+    </button>
+
+    <button class="px-6 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap text-white bg-primary-red hover:bg-red-700 transition">
+        Offers
+    </button>
+</div>
+
+
+
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+    <!-- 2. ABOUT BUILDER -->
+    <section class="bg-gray-100 py-12 px-6 sm:px-8 lg:px-16" id="about-builder-section">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-4">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+                ABOUT BUILDER
+            </h3>
+
+            <div class="grid grid-cols-2 gap-y-8 mb-10">
+                <div>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">39+</p>
+                    <p class="text-sm text-gray-600 mt-1">Years of Excellence</p>
+                </div>
+                <div>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">300+</p>
+                    <p class="text-sm text-gray-600 mt-1">Projects Completed</p>
+                </div>
+                <div>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">190+</p>
+                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Delivered</p>
+                </div>
+                <div>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">170+</p>
+                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Underway</p>
+                </div>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-12">
+                Founded in 1986 by Irfan Razack and his brothers, Prestige Group is one of India's leading real estate
+                developers, known for innovation across residential, commercial, retail, leisure, and hospitality sectors.
+                With 300+ completed projects and a 728-acre land bank, it holds CRISIL DA1+ and ICRA A+ ratings.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. INTEREST REGISTRATION FOR PRE-LAUNCH OFFERS -->
+    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="offers-registration-section">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-semibold   text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+               INTEREST REGISTRATION FOR PRE-LAUNCH OFFERS
+            </h3>
+            <P class = "text-gray-600 mb-8 max-w-lg">
+                Get exclusive access to pricing,floor plans,and lauch benefits before public release.   
+                </P>
+            <form id="offers-registration-form">
+                <input type="text" id="offers-reg-name" placeholder="Name" required
+                       class="w-full p-4 mb-4 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
+
+                <input type="tel" id="offers-reg-mobile" placeholder="Mobile Number" required
+                       pattern="[0-9]{10}"
+                       title="Mobile number must be 10 digits"
+                       class="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
+
+                <div class="flex flex-wrap items-center gap-2 mb-8 text-gray-700">
+    <span class="font-medium">Looking For:</span>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="2BHK" class="form-radio text-primary-gold h-5 w-5" checked>
+        <span class="ml-2.5">2 BHK</span>
+    </label>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="3BHK" class="form-radio text-primary-gold h-5 w-5">
+        <span class="ml-2.5">3 BHK</span>
+    </label>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="4BHK" class="form-radio text-primary-gold h-5 w-5">
+        <span class="ml-2.5">4 BHK</span>
+    </label>
+</div>
+
+
+                <button type="submit" class="w-full py-4 bg-[#856c48] hover:bg-yellow-700 transition duration-200 text-white text-xl font-bold rounded-lg shadow-xl">
+                    Register Now
+                </button>
+            </form>
+
+            <div id="registration-message" class="mt-4 p-3 rounded-lg text-center font-medium hidden" role="alert"></div>
+        </div>
+    </section>
+
+    <!-- 4. EXPERIENCE THE PRESTIGE LIFESTYLE -->
+    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="amenities-section">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-4">
                 EXPERIENCE THE PRESTIGE LIFESTYLE
             </h3>
             <p class="text-gray-600 mb-8 max-w-lg">
                 Get exclusive access to the full list of world-class amenities designed for refined living.
             </p>
 
-            <!-- Amenities Grid -->
             <div class="grid grid-cols-3 sm:grid-cols-6 gap-6 text-center mb-10">
-                <!-- Amenity 1: Plunge Pool -->
                 <div class="flex flex-col items-center">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a4 4 0 0 0 4-4c0-2-3-3-4-7-1 4-4 5-4 7a4 4 0 0 0 4 4z"/><path d="M12 18v-4"/><path d="M7 10h10"/><path d="M12 6V2"/></svg>
                     <p class="text-sm font-medium text-gray-800">Plunge Pool</p>
                 </div>
                 
-                <!-- Amenity 2: Gym & Fitness Centre -->
                 <div class="flex flex-col items-center">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69v-2.008"/><path d="M18.88 5.48l1.41-1.41"/><path d="M21.31 12h-2.008"/><path d="M18.88 18.52l1.41 1.41"/><path d="M12 21.31v2.008"/><path d="M5.12 18.52l-1.41 1.41"/><path d="M2.69 12h2.008"/><path d="M5.12 5.48l-1.41-1.41"/><circle cx="12" cy="12" r="3"/><path d="M10 12h4"/><path d="M12 10v4"/></svg>
                     <p class="text-sm font-medium text-gray-800">Gym & Fitness Centre</p>
                 </div>
                 
-                <!-- Amenity 3: Landscape Garden -->
                 <div class="flex flex-col items-center">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12C4 5 7.5 2 12 2s8 3 8 8c0 8-8 12-8 12z"/><path d="M12 18c1.66 0 3-1.34 3-3s-3-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
                     <p class="text-sm font-medium text-gray-800">Landscape Garden</p>
                 </div>
                 
-                <!-- Amenity 4: Indoor Games Room -->
                 <div class="flex flex-col items-center mt-6 sm:mt-0">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.61 0-3.05.7-4.18 1.83l-.82.82-.82-.82C7.55 3.7 6.11 3 4.5 3A5.5 5.5 0 0 0 1 8.5c0 2.3 1.5 4.04 3 5.5l7 7 7-7z"/></svg>
                     <p class="text-sm font-medium text-gray-800">Indoor Games Room</p>
                 </div>
 
-                <!-- Amenity 5: Outdoor Sports Courts -->
                 <div class="flex flex-col items-center mt-6 sm:mt-0">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H9a1 1 0 0 0-1 1v20l4-4 4 4V3a1 1 0 0 0-1-1z"/></svg>
                     <p class="text-sm font-medium text-gray-800">Outdoor Sports Courts</p>
                 </div>
 
-                <!-- Amenity 6: Yoga & Meditation Pavilion -->
                 <div class="flex flex-col items-center mt-6 sm:mt-0">
                     <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18a6 6 0 0 0 6-6V7a4 4 0 0 0-8 0v5a6 6 0 0 0 6 6z"/><path d="M12 18v4"/><path d="M18 18v4"/><path d="M6 18v4"/></svg>
                     <p class="text-sm font-medium text-gray-800">Yoga & Meditation Pavilion</p>
                 </div>
             </div>
 
-            <!-- Complete Amenities Button -->
             <div class="flex justify-center mb-12">
-                <button onclick="console.log('View complete amenities list clicked')" class="py-3 px-8 bg-primary-gold hover:bg-yellow-700 transition duration-200 text-gray-900 text-base font-bold rounded-lg shadow-lg">
+                <button onclick="console.log('View complete amenities list clicked')" class="py-3 px-8 bg-[#a68840] hover:bg-yellow-700 transition duration-200 text-white text-base font-bold rounded-lg shadow-lg">
                     Complete Amenities List
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- SITE & FLOOR PLANS SECTION -->
-    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="floorplans-section">
+    <!-- 5. SITE & FLOOR PLANS -->
+    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="floorplans-section">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
                 SITE & FLOOR PLANS
             </h3>
             
-            <!-- Site Plan Image/Placeholder -->
-            <div class="relative w-full h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-xl mb-12">
-                <!-- Using a map placeholder image -->
-                <img src="https://wpmedia.roomsketcher.com/content/uploads/2021/12/14112023/RoomSketcher-3d-site-plan-garden-layout-residential-property.jpg" alt="Site Plan Layout" class="w-full h-full object-cover">
+            <div class="relative w-full h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-xl mb-12 border border-gray-200">
+                <img src="https://wpmedia.roomsketcher.com/content/uploads/2021/12/14112023/RoomSketcher-3d-site-plan-garden-layout-residential-property.jpg" alt="Site Plan Layout" class="w-full h-full object-cover blur-md transition-none">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <button class="py-3 px-6 bg-white bg-opacity-90 hover:bg-opacity-100 transition duration-200 text-gray-800 text-lg font-bold rounded-lg shadow-lg">
-                        
+                    <button class="py-3 px-6 bg-white bg-opacity-90 transition-none text-gray-800 text-lg font-bold rounded-lg shadow-lg border border-primary-gold">
+                        Site Plan
                     </button>
                 </div>
             </div>
 
-            <!-- Floor Plan Carousel -->
-            <div class="carousel flex space-x-6 pb-4">
-                
-                <!-- Floor Plan Card 1: 2 BHK -->
-                <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-40 bg-gray-100 flex items-center justify-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Jq2-xOA9zQ5ZrRlfe7rKEknGQOhhv4UjsA&s" alt="2 BHK Floor Plan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-600 mb-1">1034 Sqft</p>
-                        <p class="text-xl font-bold text-gray-900 mb-4">₹ 2.4 Cr</p>
-                        <button class="w-full py-2 bg-primary-gold text-gray-900 font-bold rounded-lg hover:bg-yellow-700 transition">
-                            2 BHK
-                        </button>
-                    </div>
-                </div>
+  <div class="floor-carousel">
+    
+    <div class="floor-card">
+        <div class="floor-img">
+            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <p class="size">1034 Sqft</p>
+            <p class="price">₹ 2.4 Cr</p>
+            <button class="bhk-btn">2 BHK</button>
+        </div>
+    </div>
 
-                <!-- Floor Plan Card 2: 3 BHK -->
-                <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-40 bg-gray-100 flex items-center justify-center">
-                        <img src="https://www.jkcement.com/wp-content/uploads/2023/08/show-flat-scaled.jpg" alt="3 BHK Floor Plan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-600 mb-1">1450 Sqft</p>
-                        <p class="text-xl font-bold text-gray-900 mb-4">₹ 3.1 Cr</p>
-                        <button class="w-full py-2 bg-primary-gold text-gray-900 font-bold rounded-lg hover:bg-yellow-700 transition">
-                            3 BHK
-                        </button>
-                    </div>
-                </div>
+    <div class="floor-card">
+        <div class="floor-img">
+            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <p class="size">1450 Sqft</p>
+            <p class="price">₹ 3.1 Cr</p>
+            <button class="bhk-btn">3 BHK</button>
+        </div>
+    </div>
 
-                <!-- Floor Plan Card 3: 4 BHK -->
-                <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-40 bg-gray-100 flex items-center justify-center">
-                        <img src="https://www.sattvacity.info/images/sattva/sattva-city-4-bhk-apartment-floor-plan.webp" alt="4 BHK Floor Plan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-600 mb-1">2200 Sqft</p>
-                        <p class="text-xl font-bold text-gray-900 mb-4">₹ 4.8 Cr</p>
-                        <button class="w-full py-2 bg-primary-gold text-gray-900 font-bold rounded-lg hover:bg-yellow-700 transition">
-                            4 BHK
-                        </button>
-                    </div>
-                </div>
+    <div class="floor-card">
+        <div class="floor-img">
+            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <p class="size">2200 Sqft</p>
+            <p class="price">₹ 4.8 Cr</p>
+            <button class="bhk-btn">4 BHK</button>
+        </div>
+    </div>
 
-                <!-- Floor Plan Card 4: Placeholder -->
-                <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-40 bg-gray-100 flex items-center justify-center">
-                        <img src="https://assets.architecturaldesigns.com/cdn-cgi/image/width=800,fit=scale-down,quality=85,format=auto/plan_assets/368365553/original/85458MS_F2_1729279102.gif" alt="Townhouse Floor Plan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-600 mb-1">3500 Sqft</p>
-                        <p class="text-xl font-bold text-gray-900 mb-4">₹ 6.5 Cr</p>
-                        <button class="w-full py-2 bg-primary-gold text-gray-900 font-bold rounded-lg hover:bg-yellow-700 transition">
-                            Townhouse
-                        </button>
-                    </div>
-                </div>
+    <div class="floor-card">
+        <div class="floor-img">
+            <img src="https://wpmedia.roomsketcher.com/content/uploads/2021/12/14112023/RoomSketcher-3d-site-plan-garden-layout-residential-property.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <p class="size">3500 Sqft</p>
+            <p class="price">₹ 6.5 Cr</p>
+            <button class="bhk-btn">Townhouse</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+            <div class="flex justify-center mt-6">
+                <div class="h-2 w-8 bg-gray-400 rounded-full mx-1"></div>
+                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
+                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
             </div>
         </div>
     </section>
 
-    <!-- LOCATION & CONNECTIVITY SECTION -->
-    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="location-section">
+    <!-- 6. LOCATION & CONNECTIVITY -->
+    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="location-section">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
                 LOCATION & CONNECTIVITY
             </h3>
             
-            <!-- Map Placeholder -->
             <div class="relative w-full h-64 bg-gray-200 rounded-xl overflow-hidden shadow-lg mb-8">
-                <!-- Placeholder for Google Map -->
                 <img src="https://www.ordnancesurvey.co.uk/img-assets/products/openmap-local-pontypool.x9cbd03a4.jpg?w=3000&h=2001&crop=3000%2C1688%2C0%2C313&f=webp" alt="Location Map" class="w-full h-full object-cover">
-                <!-- Red Pin Placeholder -->
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full text-red-600 text-3xl font-bold">📍</div>
             </div>
 
-            <!-- Connectivity Points Grid -->
             <div class="grid grid-cols-2 gap-x-4 gap-y-6 text-gray-700 mb-10">
-                
                 <div class="flex flex-col">
                     <p class="font-semibold text-gray-900">Hope Farm Metro Station</p>
                     <p class="text-sm">0.5 km (2 mins)</p>
@@ -354,151 +499,71 @@
                 </div>
             </div>
 
-            <!-- Schedule Site Visit Button -->
             <div class="flex justify-center">
-                <button onclick="console.log('Schedule Site Visit clicked')" class="py-3 px-8 bg-primary-gold hover:bg-yellow-700 transition duration-200 text-gray-900 text-base font-bold rounded-lg shadow-lg">
+                <button onclick="console.log('Schedule Site Visit clicked')" class="py-3 px-8 bg-[#a68840] hover:bg-yellow-700 transition duration-200 text-white text-base font-bold rounded-lg shadow-lg">
                     Schedule Site Visit
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
-    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="gallery-section">
+    <!-- 7. GET YOUR PERSONALIZED EMI BREAKDOWN -->
+    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="emi-calculator-section">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                GALLERY
-            </h3>
-            
-            <!-- Gallery Carousel (uses gallery-carousel class for snapping) -->
-            <div class="carousel gallery-carousel flex overflow-x-auto pb-4 -mx-2 sm:-mx-8">
-                
-                <!-- Gallery Item 1: Tower -->
-                <div class="gallery-item mx-2" style="background-image: url('https://media.istockphoto.com/id/585292106/photo/3d-render-of-3-buildings-exterior.jpg?s=612x612&w=0&k=20&c=E78xCZwDHy9RioxSeXuZLbmOmBcQoIxwsmU9tXZoYJE=');">
-                    <div class="p-3 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <p class="text-lg font-semibold text-white">Tower</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 2: Gym -->
-                <div class="gallery-item mx-2" style="background-image: url('https://www.primalstrength.com/cdn/shop/files/gymdesign_render_Two_collumn_grid_cb1b5850-fa8e-4a7b-a2b3-190c2e45facd.jpg?v=1680719688&width=1500');">
-                    <div class="p-3 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <p class="text-lg font-semibold text-white">Gym</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 3: Swimming Pool -->
-                <div class="gallery-item mx-2" style="background-image: url('https://www.hrjohnsonindia.com/assets/images/blog/5-Innovative-Ideas-to-Design-Your-Dream-Swimming-Pool-thumb-og.jpg');">
-                    <div class="p-3 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <p class="text-lg font-semibold text-white">Swimming Pool</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 4: Yoga -->
-                <div class="gallery-item mx-2" style="background-image: url('https://images.news18.com/ibnlive/uploads/2025/07/yoga-2025-07-b991f89664f8b2f2295cef01947ff7e4.jpg');">
-                    <div class="p-3 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <p class="text-lg font-semibold text-white">Yoga</p>
-                    </div>
-                </div>
-                 <!-- Gallery Item 5: Clubhouse -->
-                <div class="gallery-item mx-2" style="background-image: url('https://litadirks.com/wp-content/uploads/2021/07/Peakline-at-Copperleaf-POI-005-scaled.jpg');">
-                    <div class="p-3 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <p class="text-lg font-semibold text-white">Clubhouse</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="flex justify-center mt-6">
-                <!-- Indicator dots placeholder -->
-                <div class="h-2 w-8 bg-gray-400 rounded-full mx-1"></div>
-                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
-                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WALKTHROUGH VIDEO SECTION -->
-    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="video-section">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                WALKTHROUGH VIDEO
-            </h3>
-
-            <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl">
-                <!-- Video Placeholder with Play Button -->
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8GdjgIlL2DjjGIC-E9PpWYOjcSNg5g6xekQ&s" alt="Project Walkthrough Video" class="w-full h-full object-cover">
-                <div class="video-overlay" onclick="console.log('Video Play button clicked')">
-                    <svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- GET YOUR PERSONALIZED EMI BREAKDOWN SECTION -->
-    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="emi-calculator-section">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-10">
                 GET YOUR PERSONALIZED EMI BREAKDOWN
             </h3>
 
             <form id="emi-form">
-                <!-- Unit Type Radio Buttons. Values are base property prices in Indian Rupees -->
-                <div class="flex space-x-6 mb-10 text-gray-800">
+                <div class="flex space-x-6 mb-10">
                     <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="emiUnitType" value="24000000" id="unit-2bhk" class="form-radio text-primary-gold h-4 w-4" checked onchange="calculateEMI()">
-                        <span class="ml-2 font-medium">2 BHK</span>
+                        <input type="radio" name="emiUnitType" value="24000000" id="unit-2bhk" class="form-radio" checked onchange="calculateEMI()">
+                        <span class="ml-3">2 BHK</span>
                     </label>
                     
                     <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="emiUnitType" value="31000000" id="unit-3bhk" class="form-radio text-primary-gold h-4 w-4" onchange="calculateEMI()">
-                        <span class="ml-2 font-medium">3 BHK</span>
+                        <input type="radio" name="emiUnitType" value="31000000" id="unit-3bhk" class="form-radio" onchange="calculateEMI()">
+                        <span class="ml-3">3 BHK</span>
                     </label>
                     
                     <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="emiUnitType" value="48000000" id="unit-4bhk" class="form-radio text-primary-gold h-4 w-4" onchange="calculateEMI()">
-                        <span class="ml-2 font-medium">4 BHK</span>
+                        <input type="radio" name="emiUnitType" value="48000000" id="unit-4bhk" class="form-radio" onchange="calculateEMI()">
+                        <span class="ml-3">4 BHK</span>
                     </label>
                 </div>
 
-                <!-- Advance Payment Slider -->
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-2">
-                        <label for="advance-payment-slider" class="text-lg font-medium text-gray-700">Advance Payment</label>
-                        <span id="advance-payment-value" class="text-lg font-bold text-gray-900">₹ 6,00,000</span>
+                <div class="mb-10">
+                    <div class="flex justify-between items-center mb-3">
+                        <label for="advance-payment-slider">Advance Payment</label>
+                        <span id="advance-payment-value">₹6,00,000</span>
                     </div>
-                    <!-- Max Advance Payment set to 50 Lacs (50,00,000) -->
                     <input type="range" id="advance-payment-slider" min="500000" max="5000000" step="100000" value="600000" oninput="updateSliderValue(this, 'advance-payment-value', 'money')">
                 </div>
 
-                <!-- Duration Slider -->
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-2">
-                        <label for="duration-slider" class="text-lg font-medium text-gray-700">Duration</label>
-                        <span id="duration-value" class="text-lg font-bold text-gray-900">25 Years</span>
+                <div class="mb-10">
+                    <div class="flex justify-between items-center mb-3">
+                        <label for="duration-slider">Duration</label>
+                        <span id="duration-value">25 Years</span>
                     </div>
                     <input type="range" id="duration-slider" min="5" max="30" step="1" value="25" oninput="updateSliderValue(this, 'duration-value', 'years')">
                 </div>
 
-                <!-- Interest Rate Slider -->
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-2">
-                        <label for="interest-rate-slider" class="text-lg font-medium text-gray-700">Interest Rate*</label>
-                        <span id="interest-rate-value" class="text-lg font-bold text-gray-900">7.0 %</span>
+                <div class="mb-10">
+                    <div class="flex justify-between items-center mb-3">
+                        <label for="interest-rate-slider">Interest Rate*</label>
+                        <span id="interest-rate-value">7.0 %</span>
                     </div>
                     <input type="range" id="interest-rate-slider" min="6.0" max="10.0" step="0.1" value="7.0" oninput="updateSliderValue(this, 'interest-rate-value', 'percent')">
                     <p class="text-xs text-gray-500 mt-2">*Rates are indicative and subject to change by banks.</p>
                 </div>
 
-                <!-- Calculate Button (kept for aesthetics, calculation runs on change) -->
-                <button type="button" onclick="calculateEMI()" class="w-full py-4 bg-primary-gold hover:bg-yellow-700 transition duration-200 text-gray-900 text-xl font-bold rounded-lg shadow-xl mt-6">
+                <button type="button" onclick="calculateEMI()" class="w-full py-4 mt-6 bg-[#856c48]">
                     Calculate
                 </button>
             </form>
             
-            <!-- EMI Result Display -->
             <div id="emi-result" class="mt-8 p-6 bg-white rounded-xl shadow-inner hidden">
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">Estimated Monthly EMI</h4>
-                <!-- Initial dummy value, updated by JS -->
                 <p class="text-4xl font-extrabold text-primary-gold">
                     <span id="emi-amount">₹ 0</span>
                 </p>
@@ -506,60 +571,122 @@
             </div>
         </div>
     </section>
-    
-    <!-- UNLOCK THE BEST OFFERS ON THIS PROJECT (Registration Form) -->
+
+    <!-- 8. GALLERY -->
+    <section class="bg-gray-50 py-12 px-6 sm:px-8 lg:px-16" id="gallery-section">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+                GALLERY
+            </h3>
+            
+            <div class="gallery-grid-carousel">
+                <div class="gallery-grid-page">
+                    <div class="gallery-grid-item" style="background-image: url('https://media.istockphoto.com/id/585292106/photo/3d-render-of-3-buildings-exterior.jpg?s=612x612&w=0&k=20&c=E78xCZwDHy9RioxSeXuZLbmOmBcQoIxwsmU9tXZoYJE=');">
+                        <span class="gallery-label">Tower</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://www.primalstrength.com/cdn/shop/files/gymdesign_render_Two_collumn_grid_cb1b5850-fa8e-4a7b-a2b3-190c2e45facd.jpg?v=1680719688&width=1500');">
+                        <span class="gallery-label">Gym</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://www.hrjohnsonindia.com/assets/images/blog/5-Innovative-Ideas-to-Design-Your-Dream-Swimming-Pool-thumb-og.jpg');">
+                        <span class="gallery-label">Swimming Pool</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://images.news18.com/ibnlive/uploads/2025/07/yoga-2025-07-b991f89664f8b2f2295cef01947ff7e4.jpg');">
+                        <span class="gallery-label">Yoga</span>
+                    </div>
+                </div>
+
+                <div class="gallery-grid-page">
+                    <div class="gallery-grid-item" style="background-image: url('https://litadirks.com/wp-content/uploads/2021/07/Peakline-at-Copperleaf-POI-005-scaled.jpg');">
+                        <span class="gallery-label">Clubhouse</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
+                        <span class="gallery-label">Garden</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
+                        <span class="gallery-label">Playground</span>
+                    </div>
+
+                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
+                        <span class="gallery-label">Lounge</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-6">
+                <div class="h-2 w-2 bg-gray-400 rounded-full mx-1"></div>
+                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. WALKTHROUGH VIDEO -->
+    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="video-section">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+                WALKTHROUGH VIDEO
+            </h3>
+
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8GdjgIlL2DjjGIC-E9PpWYOjcSNg5g6xekQ&s" alt="Project Walkthrough Video" class="w-full h-full object-cover">
+                <div class="video-overlay" onclick="console.log('Video Play button clicked')">
+                    <svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3. INTEREST REGISTRATION FOR PRE-LAUNCH OFFERS -->
     <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="offers-registration-section">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                UNLOCK THE BEST OFFERS ON THIS PROJECT
+            <h3 class="text-xl sm:text-2xl font-semibold   text-primary-gold tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+               UNLOCK THE BEST OFFERS ON THIS PROJECT
             </h3>
+            
             <form id="offers-registration-form">
-                <!-- Name Input -->
                 <input type="text" id="offers-reg-name" placeholder="Name" required
                        class="w-full p-4 mb-4 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
 
-                <!-- Mobile Number Input -->
                 <input type="tel" id="offers-reg-mobile" placeholder="Mobile Number" required
                        pattern="[0-9]{10}"
                        title="Mobile number must be 10 digits"
                        class="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
 
-                <!-- Unit Type Radio Buttons -->
-                <div class="flex flex-wrap items-center space-x-4 mb-8 text-gray-700">
-                    <span class="font-medium mr-2">Looking For:</span>
-                    
-                    <label class="inline-flex items-center mt-2 sm:mt-0 cursor-pointer">
-                        <input type="radio" name="offersUnitType" value="2BHK" class="form-radio text-primary-gold h-4 w-4" checked>
-                        <span class="ml-2">2 BHK</span>
-                    </label>
-                    
-                    <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="offersUnitType" value="3BHK" class="form-radio text-primary-gold h-4 w-4">
-                        <span class="ml-2">3 BHK</span>
-                    </label>
-                    
-                    <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="offersUnitType" value="4BHK" class="form-radio text-primary-gold h-4 w-4">
-                        <span class="ml-2">4 BHK</span>
-                    </label>
-                </div>
+                <div class="flex flex-wrap items-center gap-2 mb-8 text-gray-700">
+    <span class="font-medium">Looking For:</span>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="2BHK" class="form-radio text-primary-gold h-5 w-5" checked>
+        <span class="ml-2.5">2 BHK</span>
+    </label>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="3BHK" class="form-radio text-primary-gold h-5 w-5">
+        <span class="ml-2.5">3 BHK</span>
+    </label>
+    
+    <label class="inline-flex items-center cursor-pointer">
+        <input type="radio" name="offersUnitType" value="4BHK" class="form-radio text-primary-gold h-5 w-5">
+        <span class="ml-2.5">4 BHK</span>
+    </label>
+</div>
 
-                <!-- Register Button -->
-                <button type="submit" class="w-full py-4 bg-primary-gold hover:bg-yellow-700 transition duration-200 text-gray-900 text-xl font-bold rounded-lg shadow-xl">
-                    Register Now
+
+                <button type="submit" class="w-full py-4 bg-[#856c48] hover:bg-yellow-700 transition duration-200 text-white text-xl font-bold rounded-lg shadow-xl">
+                    I'm Interested
                 </button>
             </form>
 
-            <!-- Custom Message Box for form feedback (replaces alert()) -->
-            <div id="registration-message" class="mt-4 p-3 rounded-lg text-center font-medium hidden" role="alert"></div>
-
-        </div>
+            
     </section>
 
-    <!-- ABOUT THE PROJECT (NEW SECTION) -->
-    <section class="bg-white pt-12 px-6 sm:px-8 lg:px-16" id="about-project-section">
+    <!-- 10. ABOUT THE PROJECT -->
+    <section class="bg-gray-50 pt-12 px-6 sm:px-8 lg:px-16" id="about-project-section">
         <div class="max-w-4xl mx-auto pb-8">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
                 ABOUT THE PROJECT
             </h3>
 
@@ -576,48 +703,7 @@
         </div>
     </section>
 
-    <!-- Builder Info Section -->
-    <section class="bg-gray-100 py-12 px-6 sm:px-8 lg:px-16" id="about-builder-section">
-        <div class="max-w-4xl mx-auto">
-            
-            <!-- ABOUT BUILDER SECTION -->
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                ABOUT BUILDER
-            </h3>
-
-            <div class="grid grid-cols-2 gap-y-8 mb-10">
-                <!-- Stat 1: Years of Excellence -->
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">39+</p>
-                    <p class="text-sm text-gray-600 mt-1">Years of Excellence</p>
-                </div>
-                <!-- Stat 2: Projects Completed -->
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">300+</p>
-                    <p class="text-sm text-gray-600 mt-1">Projects Completed</p>
-                </div>
-                <!-- Stat 3: Mn. Sq. Ft. Delivered -->
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">190+</p>
-                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Delivered</p>
-                </div>
-                <!-- Stat 4: Mn. Sq. Ft. Underway -->
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">170+</p>
-                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Underway</p>
-                </div>
-            </div>
-
-            <!-- Builder Description -->
-            <p class="text-gray-700 leading-relaxed mb-12">
-                Founded in 1986 by Irfan Razack and his brothers, Prestige Group is one of India's leading real estate
-                developers, known for innovation across residential, commercial, retail, leisure, and hospitality sectors.
-                With 300+ completed projects and a 728-acre land bank, it holds CRISIL DA1+ and ICRA A+ ratings.
-            </p>
-        </div>
-    </section>
-    
-    <!-- FOOTER WITH PRIVACY POLICY (UPDATED) -->
+    <!-- 11. PRIVACY POLICY (FOOTER) -->
     <footer class="project-footer text-xs p-8">
         <div class="max-w-4xl mx-auto text-center">
              <a href="#" onclick="console.log('Privacy Policy clicked')" class="text-sm font-semibold mb-4 block hover:text-white">Privacy Policy</a>
@@ -632,8 +718,6 @@
         </div>
     </footer>
 
-
-    <!-- Link to the custom JavaScript file -->
     <script src="Project.js"></script>
 </body>
 </html>

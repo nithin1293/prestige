@@ -1,31 +1,59 @@
-/* --- Tailwind Configuration Extention (Moved to the end of body in a script tag for simplicity in this modular setup) --- */
-
-/* Custom styles for the background image and overlay */
+/* ----------------------------------------------------
+   HERO BACKGROUND + OVERLAY
+---------------------------------------------------- */
+/* ----------------------------------------------------
+   HERO BACKGROUND + OVERLAY - EXACT MATCH
+---------------------------------------------------- */
+/* ----------------------------------------------------
+   HERO BACKGROUND - EXACT MATCH
+---------------------------------------------------- */
 .hero-background {
-    /* Updated background image URL */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');
+    background-image: url('https://res-console.cloudinary.com/dtgqpj6b0/thumbnails/v1/image/upload/v1763993518/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV9xZTdwdzRxZTdwdzRxZTdwX2p3d3drcw==/drilldown'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Dark overlay for better text contrast, simulating the look in the image */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0) 100%);
+   
+    min-height: 100vh;
+    background-image: url('https://res-console.cloudinary.com/dtgqpj6b0/thumbnails/v1/image/upload/v1763993518/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV9xZTdwdzRxZTdwdzRxZTdwX2p3d3drcw==/drilldown');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
-/* Custom scrollbar styling for better aesthetic */
+
+/* For mobile devices - optimize background positioning */
+@media (max-width: 768px) {
+    .overlay {
+        background-position: center center;
+        background-attachment: scroll;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .overlay {
+        background-position: center 30%;
+        min-height: 100vh;
+    }
+}
+
+
+
+/* ----------------------------------------------------
+   SCROLLBAR
+---------------------------------------------------- */
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -37,103 +65,149 @@ body::-webkit-scrollbar-track {
     background: #f0f0f0;
 }
 
-/* Custom icon styling for better visual weight */
+/* ----------------------------------------------------
+   ICONS
+---------------------------------------------------- */
 .feature-icon {
     width: 24px;
     height: 24px;
-    color: #d8c282; /* Custom gold/brass color (used for hero stats) */
+    color: #d8c282;
 }
 
-/* Custom icon styling for the amenities section */
-.amenity-icon {
-    width: 36px;
-    height: 36px;
-    color: #d8c282; /* Custom gold/brass color */
-    margin: 0 auto 8px auto;
-}
-
-/* Custom styling for radio buttons to match the primary-gold color */
-input[type="radio"].form-radio:checked {
-    background-color: #d8c282;
-    border-color: #d8c282;
-    box-shadow: 0 0 0 3px rgba(216, 194, 130, 0.5); /* Custom focus ring */
-}
-input[type="radio"].form-radio {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 50%;
-    border: 2px solid #a8a8a8;
-    padding: 4px;
-    transition: all 0.15s ease-in-out;
-    cursor: pointer;
-}
-input[type="radio"].form-radio:checked:after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #fff;
-    transform: translate(-1px, -1px);
-}
-
-/* --- Carousel Base Styles --- */
+/* ----------------------------------------------------
+   CAROUSEL (FLOOR PLANS)
+---------------------------------------------------- */
 .carousel {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.carousel-item {
-    scroll-snap-align: start;
-    flex: 0 0 auto; /* Prevent stretching */
-    width: 85%; /* Make card slightly less than full width to show next card */
-    max-width: 300px;
-}
-/* Hide scrollbar on supported browsers */
 .carousel::-webkit-scrollbar {
     display: none;
 }
-.carousel {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+
+.carousel-item {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 85%;
+    max-width: 300px;
 }
 
-/* --- GALLERY SPECIFIC STYLES (Adjusted) --- */
-.gallery-carousel {
+/* ----------------------------------------------------
+   GALLERY SECTION - HORIZONTAL CAROUSEL WITH FIXED WIDTH
+---------------------------------------------------- */
+/* ----------------------------------------------------
+   GALLERY SECTION - 2x2 GRID WITH HORIZONTAL SCROLL
+---------------------------------------------------- */
+.gallery-grid-carousel {
+    display: flex;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 1rem; /* Space for the bottom shadow/indicators */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
 }
-.gallery-item {
-    height: 220px; /* Slightly taller for visual impact */
+
+.gallery-grid-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+/* Each page is a 2x2 grid with fixed width */
+.gallery-grid-page {
+    flex-shrink: 0;
+    
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    scroll-snap-align: start;
+}
+
+/* Individual grid items with fixed dimensions */
+.gallery-grid-item {
     position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    overflow: hidden;
-    flex-shrink: 0;
-    /* Set a consistent width and space for clean snapping */
-    width: 170px; /* Item width */
-    margin-right: 16px; /* Spacing between items */
-    scroll-snap-align: start; /* Ensure item snaps to start of scroll container */
-}
-.gallery-item:last-child {
-    margin-right: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* Style for the video play button overlay */
+.gallery-grid-item:hover {
+    transform: scale(1.02);
+}
+
+/* Label - top-left corner with white background */
+.gallery-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: white;
+    color: #1f2937;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* Responsive adjustments - maintain grid structure */
+@media (min-width: 640px) {
+    .gallery-grid-page {
+        max-width: 600px;
+    }
+    
+    .gallery-grid-item {
+        height: 180px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-grid-page {
+        max-width: 700px;
+    }
+    
+    .gallery-grid-item {
+        height: 200px;
+    }
+}
+
+/* Smooth scrolling */
+.gallery-grid-carousel {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+/* ----------------------------------------------------
+   VIDEO PLAY OVERLAY
+---------------------------------------------------- */
 .video-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+
 .play-button {
     color: white;
     opacity: 0.8;
@@ -143,48 +217,297 @@ input[type="radio"].form-radio:checked:after {
     opacity: 1;
 }
 
-/* Custom slider styles for EMI calculator */
+/* ----------------------------------------------------
+   INPUT RANGE SLIDER - WITH DARK PROGRESS FILL
+---------------------------------------------------- */
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
-    height: 8px;
-    background: #e0e0e0;
-    border-radius: 4px;
+    height: 6px;
+    background: transparent;
+    border-radius: 3px;
     margin: 10px 0;
     cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-track {
+    width: 100%;
+    height: 6px;
+    background: #e5e5e5;
+    border-radius: 3px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: #d8c282;
-    border: 3px solid #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-top: -5px; /* Adjust vertical alignment */
+    background: #1f2937;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: #e5e5e5;
+    border-radius: 3px;
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: #d8c282;
-    border: 3px solid #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #1f2937;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
-/* Custom footer section background and text */
+input[type="range"]::-moz-range-progress {
+    height: 6px;
+    background: #1f2937;
+    border-radius: 3px;
+}
+
+
+/* Firefox progress bar */
+input[type="range"]::-moz-range-progress {
+    height: 6px;
+    background: #1f2937;
+    border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: #e5e5e5;
+    border-radius: 3px;
+}
+
+
+/* ----------------------------------------------------
+   RADIO BUTTONS - UPDATED FOR EMI SECTION
+---------------------------------------------------- */
+input[type="radio"].form-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+}
+
+input[type="radio"].form-radio:checked {
+    background-color: #1f2937;
+    border-color: #1f2937;
+}
+
+input[type="radio"].form-radio:checked::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------------------------------------
+   EMI SECTION SPECIFIC STYLES
+---------------------------------------------------- */
+#emi-calculator-section h3 {
+    color: #7a6a4e;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+#emi-calculator-section .border-primary-gold {
+    border-color: #c9a961;
+}
+
+#emi-form label span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+#emi-form .flex.space-x-6 {
+    gap: 2rem;
+}
+
+/* Slider labels */
+#emi-form .flex.justify-between label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+#emi-form .flex.justify-between span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Calculate button - brown/dark styling */
+#emi-form button[type="button"] {
+    background-color: #7a6a4e;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    box-shadow: none;
+    transition: background-color 0.2s ease;
+}
+
+#emi-form button[type="button"]:hover {
+    background-color: #5f5439;
+}
+
+/* Disclaimer text */
+#emi-form .text-xs.text-gray-500 {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
 .project-footer {
     background-color: #1a1a1a;
     color: #d1d5db;
 }
+
 .project-footer a {
     color: #d8c282;
     text-decoration: none;
     transition: color 0.2s;
 }
+
 .project-footer a:hover {
     color: #fff;
 }
+
+/* ----------------------------------------------------
+   AMENITIES ICONS
+---------------------------------------------------- */
+.amenity-icon {
+    width: 36px;
+    height: 36px;
+    color: #d8c282;
+    margin: 0 auto 8px auto;
+}
+
+/* ----------------------------------------------------
+   RADIO BUTTONS
+---------------------------------------------------- */
+input[type="radio"].form-radio {
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid #a8a8a8;
+    padding: 4px;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+input[type="radio"].form-radio:checked {
+    background-color: #d8c282;
+    border-color: #d8c282;
+    box-shadow: 0 0 0 3px rgba(216, 194, 130, 0.5);
+}
+
+input[type="radio"].form-radio:checked:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-1px, -1px);
+}
+.floor-carousel {
+    display: flex;
+    gap: 10px; /* tight spacing */
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.floor-card {
+    width: 180px;                 /* compact width */
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.floor-img {
+    height: 120px;                /* smaller image */
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.size {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.bhk-btn {
+    width: 100%;
+    padding: 6px;
+    background-color: #a68840;   /* gold */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.floor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);      /* Blur effect added */
+    transform: scale(1.05); /* Slight zoom so edges don’t show */
+}
+

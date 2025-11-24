@@ -8,20 +8,51 @@ function formatCurrency(num) {
 }
 
 // Function to dynamically update slider display values and trigger EMI calculation
-function updateSliderValue(slider, displayId, type) {
+// Function to update slider background dynamically
+function updateSliderBackground(slider) {
+    const min = slider.min || 0;
+    const max = slider.max || 100;
     const value = slider.value;
-    const display = document.getElementById(displayId);
-
-    if (type === 'money') {
-        display.textContent = formatCurrency(value);
-    } else if (type === 'years') {
-        display.textContent = `${value} Years`;
-    } else if (type === 'percent') {
-        display.textContent = `${parseFloat(value).toFixed(1)} %`;
-    }
-    // Recalculate EMI immediately when sliders/units change
-    calculateEMI();
+    
+    // Calculate percentage
+    const percentage = ((value - min) / (max - min)) * 100;
+    
+    // Update background with gradient
+    slider.style.background = `linear-gradient(to right, #1f2937 0%, #1f2937 ${percentage}%, #e5e5e5 ${percentage}%, #e5e5e5 100%)`;
 }
+
+// Update the existing updateSliderValue function
+function updateSliderValue(slider, targetId, type) {
+    const target = document.getElementById(targetId);
+    const value = parseFloat(slider.value);
+    
+    // Update background for progress effect
+    updateSliderBackground(slider);
+    
+    if (type === 'money') {
+        target.textContent = '₹' + value.toLocaleString('en-IN');
+    } else if (type === 'years') {
+        target.textContent = value + ' Years';
+    } else if (type === 'percent') {
+        target.textContent = value.toFixed(1) + ' %';
+    }
+}
+
+// Initialize all sliders on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('input[type="range"]');
+    
+    sliders.forEach(slider => {
+        // Set initial background
+        updateSliderBackground(slider);
+        
+        // Update on input
+        slider.addEventListener('input', function() {
+            updateSliderBackground(this);
+        });
+    });
+});
+
 
 // Function to calculate and display the EMI
 function calculateEMI() {
@@ -106,6 +137,7 @@ function handleRegistration(event) {
     }, 5000);
 }
 
+
 // Combined Initialization Function
 function initializePage() {
     // Initialize Lucide icons
@@ -131,6 +163,7 @@ function initializePage() {
         registrationForm.onsubmit = handleRegistration;
     }
 }
+
 
 // Initialize the page once all content is loaded
 window.onload = initializePage;
