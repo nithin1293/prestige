@@ -164,6 +164,5 @@ function initializePage() {
     }
 }
 
-
 // Initialize the page once all content is loaded
 window.onload = initializePage;
