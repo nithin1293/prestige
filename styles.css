@@ -1,0 +1,190 @@
+/* --- Tailwind Configuration Extention (Moved to the end of body in a script tag for simplicity in this modular setup) --- */
+
+/* Custom styles for the background image and overlay */
+.hero-background {
+    /* Updated background image URL */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Dark overlay for better text contrast, simulating the look in the image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Custom scrollbar styling for better aesthetic */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+/* Custom icon styling for better visual weight */
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    color: #d8c282; /* Custom gold/brass color (used for hero stats) */
+}
+
+/* Custom icon styling for the amenities section */
+.amenity-icon {
+    width: 36px;
+    height: 36px;
+    color: #d8c282; /* Custom gold/brass color */
+    margin: 0 auto 8px auto;
+}
+
+/* Custom styling for radio buttons to match the primary-gold color */
+input[type="radio"].form-radio:checked {
+    background-color: #d8c282;
+    border-color: #d8c282;
+    box-shadow: 0 0 0 3px rgba(216, 194, 130, 0.5); /* Custom focus ring */
+}
+input[type="radio"].form-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid #a8a8a8;
+    padding: 4px;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+input[type="radio"].form-radio:checked:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-1px, -1px);
+}
+
+/* --- Carousel Base Styles --- */
+.carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.carousel-item {
+    scroll-snap-align: start;
+    flex: 0 0 auto; /* Prevent stretching */
+    width: 85%; /* Make card slightly less than full width to show next card */
+    max-width: 300px;
+}
+/* Hide scrollbar on supported browsers */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* --- GALLERY SPECIFIC STYLES (Adjusted) --- */
+.gallery-carousel {
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem; /* Space for the bottom shadow/indicators */
+}
+.gallery-item {
+    height: 220px; /* Slightly taller for visual impact */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* Set a consistent width and space for clean snapping */
+    width: 170px; /* Item width */
+    margin-right: 16px; /* Spacing between items */
+    scroll-snap-align: start; /* Ensure item snaps to start of scroll container */
+}
+.gallery-item:last-child {
+    margin-right: 0;
+}
+
+/* Style for the video play button overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.play-button {
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.play-button:hover {
+    opacity: 1;
+}
+
+/* Custom slider styles for EMI calculator */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #d8c282;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: -5px; /* Adjust vertical alignment */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #d8c282;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom footer section background and text */
+.project-footer {
+    background-color: #1a1a1a;
+    color: #d1d5db;
+}
+.project-footer a {
+    color: #d8c282;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.project-footer a:hover {
+    color: #fff;
+}
