@@ -8,16 +8,34 @@
    HERO BACKGROUND - EXACT MATCH
 ---------------------------------------------------- */
 .hero-background {
-    background-image: url('https://res-console.cloudinary.com/dtgqpj6b0/thumbnails/v1/image/upload/v1763993518/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV9xZTdwdzRxZTdwdzRxZTdwX2p3d3drcw==/drilldown'); 
-    background-size: cover;
-    background-position: center;
+    background-image: url('https://res-console.cloudinary.com/dtgqpj6b0/thumbnails/v1/image/upload/v1763993518/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV9xZTdwdzRxZTdwdzRxZTdwX2p3d3drcw==/drilldown');
+    background-size: cover;                 /* fills container without distortion */
+    background-position: center center;     /* keeps important content centered */
     background-repeat: no-repeat;
     min-height: 100vh;
+    width: 100%;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.overlay {
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .hero-background {
+        background-position: top center;    /* so main part stays visible */
+        min-height: 85vh;                   /* improves layout on phones */
+    }
+}
+
+/* Very large screens (avoid zoom blur) */
+@media (min-width: 1600px) {
+    .hero-background {
+        background-size: contain;           
+        background-color: #000;
+    }
+}
+
+
+/* .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,7 +65,7 @@
         background-position: center 30%;
         min-height: 100vh;
     }
-}
+} */
 
 
 
@@ -427,9 +445,9 @@ input[type="radio"].form-radio {
 }
 
 input[type="radio"].form-radio:checked {
-    background-color: #d8c282;
-    border-color: #d8c282;
-    box-shadow: 0 0 0 3px rgba(216, 194, 130, 0.5);
+    background-color: #151514;
+    border-color:#151514;
+    
 }
 
 input[type="radio"].form-radio:checked:after {
