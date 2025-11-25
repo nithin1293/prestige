@@ -8,29 +8,44 @@
    HERO BACKGROUND - EXACT MATCH
 ---------------------------------------------------- */
 .hero-background {
-    background-image: url('https://res-console.cloudinary.com/dtgqpj6b0/thumbnails/v1/image/upload/v1763993518/R2VtaW5pX0dlbmVyYXRlZF9JbWFnZV9xZTdwdzRxZTdwdzRxZTdwX2p3d3drcw==/drilldown');
-    background-size: cover;                 /* fills container without distortion */
+                    /* fills container without distortion */
     background-position: center center;     /* keeps important content centered */
     background-repeat: no-repeat;
     min-height: 100vh;
-    width: 100%;
-    position: relative;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+
+    /* 2. Set the container to the full height and width of the viewport */
+        
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Mobile optimization */
 @media (max-width: 768px) {
+
     .hero-background {
+        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1764062012/Gemini_Generated_Image_bpeevebpeevebpee_flra7g.png');
         background-position: top center;    /* so main part stays visible */
-        min-height: 85vh;                   /* improves layout on phones */
+        min-height: 100vh;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;                   /* improves layout on phones */
     }
 }
 
 /* Very large screens (avoid zoom blur) */
-@media (min-width: 1600px) {
+@media (min-width: 768px) {
+    
     .hero-background {
+        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1763993518/Gemini_Generated_Image_qe7pw4qe7pw4qe7p_jwwwks.png');
         background-size: contain;           
         background-color: #000;
+        min-height: 100vh;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+
     }
 }
 
