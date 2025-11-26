@@ -163,6 +163,65 @@ function initializePage() {
         registrationForm.onsubmit = handleRegistration;
     }
 }
+// FLOOR CAROUSEL DOT INDICATOR
+const floorCarousel = document.querySelector(".floor-carousel");
+const dots = document.querySelectorAll("#floor-dots .dot");
+
+function updateDots() {
+    const cardWidth = floorCarousel.children[0].offsetWidth + 10; // dynamic width + gap
+    const scrollPos = floorCarousel.scrollLeft;
+    const index = Math.round(scrollPos / cardWidth);
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+        dot.style.backgroundColor = i === index ? "#111" : "#c8c8c8";
+    });
+}
+
+
+floorCarousel.addEventListener("scroll", updateDots);
+
+// click on dots to move
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        const cardWidth = floorCarousel.children[0].offsetWidth + 10;
+        floorCarousel.scrollTo({
+            left: i * cardWidth,
+            behavior: "smooth"
+        });
+    });
+});
+
+// GALLERY DOT INDICATOR
+const galleryCarousel = document.querySelector(".gallery-grid-carousel");
+const galleryPages = document.querySelectorAll(".gallery-grid-page");
+const galleryDots = document.querySelectorAll("#gallery-dots .gallery-dot");
+
+function updateGalleryDots() {
+    const pageWidth = galleryPages[0].offsetWidth + 16; // width + gap
+    const index = Math.round(galleryCarousel.scrollLeft / pageWidth);
+
+    galleryDots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
+
+galleryCarousel.addEventListener("scroll", updateGalleryDots);
+
+galleryDots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        const pageWidth = galleryPages[0].offsetWidth + 16;
+        galleryCarousel.scrollTo({
+            left: i * pageWidth,
+            behavior: "smooth"
+        });
+        updateGalleryDots();
+    });
+});
+
+
+
+
 
 // Initialize the page once all content is loaded
 window.onload = initializePage;

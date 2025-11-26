@@ -8,6 +8,8 @@
     <title>The Prestige City - Sarjapur</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
     
     <link rel="stylesheet" href="styles.css">
 
@@ -45,7 +47,7 @@
     
     
     <!-- Main Content - Added proper top padding -->
-    <main class="relative z-10 px-4 pt-64 pb-2 min-h-screen">
+    <main class="relative z-10 px-4 pt-64  min-h-screen">
         <div class="w-full max-w-md mx-auto pt-16">
             
             <!-- DARK GRAY CARD with Title INSIDE -->
@@ -156,13 +158,13 @@
             </div>
 
             <!-- WHITE PRICE CARD -->
-            <div class="bg-white rounded-3xl pb-16 mt- ">
-                <div class="flex justify-between items-center pl-4">
-                    <div class = "pl-4">
+            <div class="bg-white rounded-3xl pb-16  ">
+                <div class="flex justify-between items-center mt-4 pl-4">
+                    <div class = "pl-4 mt-4">
                         <p class="text-base font-bold text-gray-900 mb-1 pl-8">EOI Amount</p>
                         <p class="text-lg text-gray-900 pl-8">4.5 Lacs</p>
                     </div>
-                    <div class="text-right pr-4">
+                    <div class="text-right pr-4 mt-4">
                         <p class="text-base font-bold text-gray-900 mb-1 pr-8">Starting Price</p>
                         <p class="text-lg text-gray-900 pr-16 ">₹1.67 Cr*</p>
                     </div>
@@ -170,7 +172,7 @@
             </div>
 
 <!-- Navigation Buttons -->
-<div class="flex  justify-center gap-1 sm:gap-3 md:gap-4 mt-2">
+<div class="flex  justify-center gap-1 mt-14  sm:gap-3 md:gap-4 ">
     <button class="px-4 sm:px-5 md:px-6 py-1 sm:py-1.5 border border-primary-gold text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap bg-white hover:bg-primary-gold transition">
         Floor Plan
     </button>
@@ -187,11 +189,6 @@
         Offers
     </button>
 </div>
-
-
-
-
-
         </div>
     </main>
 </div>
@@ -201,38 +198,43 @@
 
 
     <!-- 2. ABOUT BUILDER -->
-    <section class="bg-gray-100 py-12 px-6 sm:px-8 lg:px-16" id="about-builder-section">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                ABOUT BUILDER
-            </h3>
+    <section class="bg-gray-100 py-12 px-6 mt-6 sm:px-8 lg:px-16" id="about-builder-section">
+    <div class="max-w-5xl mx-auto">
+        <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-10">
+            ABOUT BUILDER
+        </h3>
 
-            <div class="grid grid-cols-2 gap-y-8 mb-10">
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">39+</p>
-                    <p class="text-sm text-gray-600 mt-1">Years of Excellence</p>
-                </div>
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">300+</p>
-                    <p class="text-sm text-gray-600 mt-1">Projects Completed</p>
-                </div>
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">190+</p>
-                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Delivered</p>
-                </div>
-                <div>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-none">170+</p>
-                    <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Underway</p>
-                </div>
+        <!-- Responsive Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-center sm:text-left">
+            <div>
+                <p class="text-5xl font-extrabold text-gray-900 leading-none">39+</p>
+                <p class="text-sm text-gray-600 mt-1">Years of Excellence</p>
             </div>
 
-            <p class="text-gray-700 leading-relaxed mb-12">
-                Founded in 1986 by Irfan Razack and his brothers, Prestige Group is one of India's leading real estate
-                developers, known for innovation across residential, commercial, retail, leisure, and hospitality sectors.
-                With 300+ completed projects and a 728-acre land bank, it holds CRISIL DA1+ and ICRA A+ ratings.
-            </p>
+            <div>
+                <p class="text-5xl font-extrabold text-gray-900 leading-none">300+</p>
+                <p class="text-sm text-gray-600 mt-1">Projects Completed</p>
+            </div>
+
+            <div>
+                <p class="text-5xl font-extrabold text-gray-900 leading-none">190+</p>
+                <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Delivered</p>
+            </div>
+
+            <div>
+                <p class="text-5xl font-extrabold text-gray-900 leading-none">170+</p>
+                <p class="text-sm text-gray-600 mt-1">Mn. Sq. Ft. Underway</p>
+            </div>
         </div>
-    </section>
+
+        <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
+            Founded in 1986 by Irfan Razack and his brothers, Prestige Group is one of India's leading real estate
+            developers, known for innovation across residential, commercial, retail, leisure, and hospitality sectors.
+            With 300+ completed projects and a 728-acre land bank, it holds CRISIL DA1+ and ICRA A+ ratings.
+        </p>
+    </div>
+</section>
+
 
     <!-- 3. INTEREST REGISTRATION FOR PRE-LAUNCH OFFERS -->
     <section class="bg-white py-10 px-4 sm:px-8 lg:px-16" id="offers-registration-section">
@@ -303,24 +305,22 @@
                 </div>
                 
                 <div class="flex flex-col items-center">
-                    <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12C4 5 7.5 2 12 2s8 3 8 8c0 8-8 12-8 12z"/><path d="M12 18c1.66 0 3-1.34 3-3s-3-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
-                    <p class="text-sm font-medium text-gray-800">Landscape Garden</p>
-                </div>
-                
-                <div class="flex flex-col items-center mt-6 sm:mt-0">
-                    <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.61 0-3.05.7-4.18 1.83l-.82.82-.82-.82C7.55 3.7 6.11 3 4.5 3A5.5 5.5 0 0 0 1 8.5c0 2.3 1.5 4.04 3 5.5l7 7 7-7z"/></svg>
-                    <p class="text-sm font-medium text-gray-800">Indoor Games Room</p>
-                </div>
-
-                <div class="flex flex-col items-center mt-6 sm:mt-0">
-                    <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H9a1 1 0 0 0-1 1v20l4-4 4 4V3a1 1 0 0 0-1-1z"/></svg>
-                    <p class="text-sm font-medium text-gray-800">Outdoor Sports Courts</p>
-                </div>
-
-                <div class="flex flex-col items-center mt-6 sm:mt-0">
-                    <svg class="amenity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18a6 6 0 0 0 6-6V7a4 4 0 0 0-8 0v5a6 6 0 0 0 6 6z"/><path d="M12 18v4"/><path d="M18 18v4"/><path d="M6 18v4"/></svg>
-                    <p class="text-sm font-medium text-gray-800">Yoga & Meditation Pavilion</p>
-                </div>
+                <i class="ri-plant-line amenity-icon"></i>
+                <p class="text-sm font-medium text-gray-800">Landscape Garden</p>
+            </div>
+            <div class="flex flex-col items-center mt-6 sm:mt-0">
+                <i class="ri-gamepad-line amenity-icon"></i>
+                <p class="text-sm font-medium text-gray-800">Indoor Games Room</p>
+            </div>
+            <div class="flex flex-col items-center mt-6 sm:mt-0">
+                <i class="ri-football-line amenity-icon"></i>
+                <p class="text-sm font-medium text-gray-800">Outdoor Sports Courts</p>
+            </div>
+            <div class="flex flex-col items-center mt-6 sm:mt-0">
+                <i class="ri-user-heart-line amenity-icon"></i>
+                <p class="text-sm font-medium text-gray-800">Yoga & Meditation Pavilion</p>
+            </div>
+        </div>
             </div>
 
             <div class="flex justify-center mb-12">
@@ -347,61 +347,60 @@
                 </div>
             </div>
 
+  <div class="floor-carousel-container">
   <div class="floor-carousel">
-    
     <div class="floor-card">
-        <div class="floor-img">
-            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
-        </div>
-        <div class="card-content">
-            <p class="size">1034 Sqft</p>
-            <p class="price">₹ 2.4 Cr</p>
-            <button class="bhk-btn">2 BHK</button>
-        </div>
+      <div class="floor-img">
+        <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <p class="size">1034 Sqft</p>
+        <p class="price">₹ 2.4 Cr</p>
+        <button class="bhk-btn">2 BHK</button>
+      </div>
     </div>
-
     <div class="floor-card">
-        <div class="floor-img">
-            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
-        </div>
-        <div class="card-content">
-            <p class="size">1450 Sqft</p>
-            <p class="price">₹ 3.1 Cr</p>
-            <button class="bhk-btn">3 BHK</button>
-        </div>
+      <div class="floor-img">
+        <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <p class="size">1450 Sqft</p>
+        <p class="price">₹ 3.1 Cr</p>
+        <button class="bhk-btn">3 BHK</button>
+      </div>
     </div>
-
     <div class="floor-card">
-        <div class="floor-img">
-            <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
-        </div>
-        <div class="card-content">
-            <p class="size">2200 Sqft</p>
-            <p class="price">₹ 4.8 Cr</p>
-            <button class="bhk-btn">4 BHK</button>
-        </div>
+      <div class="floor-img">
+        <img src="https://cms.interiorcompany.com/wp-content/uploads/2025/01/36x47-plan-for-2-bhk-house.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <p class="size">2200 Sqft</p>
+        <p class="price">₹ 4.8 Cr</p>
+        <button class="bhk-btn">4 BHK</button>
+      </div>
     </div>
-
     <div class="floor-card">
-        <div class="floor-img">
-            <img src="https://wpmedia.roomsketcher.com/content/uploads/2021/12/14112023/RoomSketcher-3d-site-plan-garden-layout-residential-property.jpg" alt="">
-        </div>
-        <div class="card-content">
-            <p class="size">3500 Sqft</p>
-            <p class="price">₹ 6.5 Cr</p>
-            <button class="bhk-btn">Townhouse</button>
-        </div>
+      <div class="floor-img">
+        <img src="https://wpmedia.roomsketcher.com/content/uploads/2021/12/14112023/RoomSketcher-3d-site-plan-garden-layout-residential-property.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <p class="size">3500 Sqft</p>
+        <p class="price">₹ 6.5 Cr</p>
+        <button class="bhk-btn">Townhouse</button>
+      </div>
     </div>
-
+  </div>
 </div>
 
 
 
-            <div class="flex justify-center mt-6">
-                <div class="h-2 w-8 bg-gray-400 rounded-full mx-1"></div>
-                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
-                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
-            </div>
+
+            <div class="flex justify-center mt-4 gap-2" id="floor-dots">
+    <div class="dot active h-2 w-2 rounded-full bg-gray-800"></div>
+    <div class="dot h-2 w-2 rounded-full bg-gray-400"></div>
+    
+</div>
+
         </div>
     </section>
 
@@ -550,31 +549,29 @@
                     <div class="gallery-grid-item" style="background-image: url('https://images.news18.com/ibnlive/uploads/2025/07/yoga-2025-07-b991f89664f8b2f2295cef01947ff7e4.jpg');">
                         <span class="gallery-label">Yoga</span>
                     </div>
+                    
                 </div>
 
                 <div class="gallery-grid-page">
-                    <div class="gallery-grid-item" style="background-image: url('https://litadirks.com/wp-content/uploads/2021/07/Peakline-at-Copperleaf-POI-005-scaled.jpg');">
+                    
+                     <div class="gallery-grid-item" style="background-image: url('https://litadirks.com/wp-content/uploads/2021/07/Peakline-at-Copperleaf-POI-005-scaled.jpg');">
                         <span class="gallery-label">Clubhouse</span>
                     </div>
+                    
+                    
 
-                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
-                        <span class="gallery-label">Garden</span>
-                    </div>
-
-                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
-                        <span class="gallery-label">Playground</span>
-                    </div>
-
-                    <div class="gallery-grid-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CmhaNqX-5JPZqwdasTizMOupXeMmHD5xug&s');">
-                        <span class="gallery-label">Lounge</span>
+                    
                     </div>
                 </div>
             </div>
             
-            <div class="flex justify-center mt-6">
-                <div class="h-2 w-2 bg-gray-400 rounded-full mx-1"></div>
-                <div class="h-2 w-2 bg-gray-300 rounded-full mx-1"></div>
-            </div>
+           <div id="gallery-dots" class="flex justify-center items-center gap-2 mt-4 mb-2 w-full">
+    <div class="gallery-dot active"></div>
+    <div class="gallery-dot"></div>
+    
+</div>
+
+
         </div>
     </section>
 
@@ -593,84 +590,77 @@
             </div>
         </div>
     </section>
-    <!-- 3. INTEREST REGISTRATION FOR PRE-LAUNCH OFFERS -->
-    <section class="bg-white py-12 px-6 sm:px-8 lg:px-16" id="offers-registration-section">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl sm:text-2xl font-semibold   text-primary-gold tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-               UNLOCK THE BEST OFFERS ON THIS PROJECT
-            </h3>
-            
-            <form id="offers-registration-form">
-                <input type="text" id="offers-reg-name" placeholder="Name" required
-                       class="w-full p-4 mb-4 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
+    <!-- Offers Registration Section -->
+<section class="bg-white py-12 px-2 sm:px-6 lg:px-48 xl:px-96" id="offers-registration-section">
+  <div class="max-w-3xl mx-auto w-full">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary-gold tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+      UNLOCK THE BEST OFFERS ON THIS PROJECT
+    </h3>
+    <form id="offers-registration-form" class="flex flex-col gap-4">
+      <input type="text" id="offers-reg-name" placeholder="Name" required
+        class="w-full p-4 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150"/>
 
-                <input type="tel" id="offers-reg-mobile" placeholder="Mobile Number" required
-                       pattern="[0-9]{10}"
-                       title="Mobile number must be 10 digits"
-                       class="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150">
+      <input type="tel" id="offers-reg-mobile" placeholder="Mobile Number" required
+        pattern="[0-9]{10}"
+        title="Mobile number must be 10 digits"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:border-primary-gold focus:ring-1 focus:ring-primary-gold placeholder-gray-500 text-gray-900 shadow-sm transition duration-150"/>
 
-                <div class="flex flex-wrap items-center gap-2 mb-8 text-gray-700">
-    <span class="font-medium">Looking For:</span>
-    
-    <label class="inline-flex items-center cursor-pointer">
-        <input type="radio" name="offersUnitType" value="2BHK" class="form-radio text-primary-gold h-5 w-5" checked>
-        <span class="ml-2.5">2 BHK</span>
-    </label>
-    
-    <label class="inline-flex items-center cursor-pointer">
-        <input type="radio" name="offersUnitType" value="3BHK" class="form-radio text-primary-gold h-5 w-5">
-        <span class="ml-2.5">3 BHK</span>
-    </label>
-    
-    <label class="inline-flex items-center cursor-pointer">
-        <input type="radio" name="offersUnitType" value="4BHK" class="form-radio text-primary-gold h-5 w-5">
-        <span class="ml-2.5">4 BHK</span>
-    </label>
-</div>
+      <div class="flex flex-wrap items-center gap-4 text-gray-700">
+        <span class="font-medium">Looking For:</span>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="offersUnitType" value="2BHK" class="form-radio text-primary-gold h-5 w-5" checked>
+          <span class="ml-2.5">2 BHK</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="offersUnitType" value="3BHK" class="form-radio text-primary-gold h-5 w-5">
+          <span class="ml-2.5">3 BHK</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="offersUnitType" value="4BHK" class="form-radio text-primary-gold h-5 w-5">
+          <span class="ml-2.5">4 BHK</span>
+        </label>
+      </div>
 
+      <button type="submit" class="w-full py-4 bg-[#856c48] hover:bg-yellow-700 transition duration-200 text-white text-xl font-bold rounded-lg shadow-xl">
+        I'm Interested
+      </button>
+    </form>
+  </div>
+</section>
 
-                <button type="submit" class="w-full py-4 bg-[#856c48] hover:bg-yellow-700 transition duration-200 text-white text-xl font-bold rounded-lg shadow-xl">
-                    I'm Interested
-                </button>
-            </form>
+<!-- About Project Section -->
+<section class="bg-gray-50 pt-12 px-2 sm:px-6 lg:px-48 xl:px-96" id="about-project-section">
+  <div class="max-w-3xl mx-auto w-full pb-8">
+    <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
+      ABOUT THE PROJECT
+    </h3>
+    <div class="text-gray-700 space-y-3 mb-6">
+      <p class="text-lg font-semibold text-gray-900">Agent KA-RERA No. – PRM/KA/RERA/1251/446/AG/171021/001317</p>
+      <p class="text-lg font-semibold text-gray-900">Project KA-RERA No. – Coming Soon</p>
+    </div>
+    <p class="text-gray-700 leading-relaxed">
+      Prestige City, Bangalore is a premium integrated township on Sarjapur Road offering modern apartments, villas, and plots. 
+      With world-class amenities, landscaped spaces, and excellent connectivity to ORR, Whitefield, and major tech hubs, it 
+      delivers a balanced lifestyle of comfort, convenience, and long-term value within a well-planned urban community.
+    </p>
+  </div>
+</section>
 
-            
-    </section>
+<!-- Footer Section -->
+<footer class="project-footer text-xs px-2 sm:px-6 lg:px-48 xl:px-96 py-8 mt-0 w-full">
+  <div class="max-w-3xl mx-auto text-center w-full">
+    <a href="#" onclick="console.log('Privacy Policy clicked')" class="text-sm font-semibold mb-4 block hover:text-white">Privacy Policy</a>
+    <p class="leading-relaxed mb-4">
+      Prestige City, Bangalore is a premium integrated township on Sarjapur Road offering modern apartments, villas, and plots. 
+      With world-class amenities, landscaped spaces, and excellent connectivity to ORR, Whitefield, and major tech hubs, it 
+      delivers a balanced lifestyle of comfort, convenience, and long-term value within a well-planned urban community.
+    </p>
+    <p class="mt-4">
+      *T&C Apply. Prices are subject to change without prior notice. This is a conceptual representation.
+    </p>
+  </div>
+</footer>
 
-    <!-- 10. ABOUT THE PROJECT -->
-    <section class="bg-gray-50 pt-12 px-6 sm:px-8 lg:px-16" id="about-project-section">
-        <div class="max-w-4xl mx-auto pb-8">
-            <h3 class="text-xl sm:text-2xl font-semibold text-[#a68840] tracking-wider border-b-2 border-primary-gold inline-block pb-1 mb-8">
-                ABOUT THE PROJECT
-            </h3>
-
-            <div class="text-gray-700 space-y-3 mb-6">
-                <p class="text-lg font-semibold text-gray-900">Agent KA-RERA No. – PRM/KA/RERA/1251/446/AG/171021/001317</p>
-                <p class="text-lg font-semibold text-gray-900">Project KA-RERA No. – Coming Soon</p>
-            </div>
-            
-            <p class="text-gray-700 leading-relaxed">
-                Prestige City, Bangalore is a premium integrated township on Sarjapur Road offering modern apartments, villas, and plots. 
-                With world-class amenities, landscaped spaces, and excellent connectivity to ORR, Whitefield, and major tech hubs, it 
-                delivers a balanced lifestyle of comfort, convenience, and long-term value within a well-planned urban community.
-            </p>
-        </div>
-    </section>
-
-    <!-- 11. PRIVACY POLICY (FOOTER) -->
-    <footer class="project-footer text-xs p-8">
-        <div class="max-w-4xl mx-auto text-center">
-             <a href="#" onclick="console.log('Privacy Policy clicked')" class="text-sm font-semibold mb-4 block hover:text-white">Privacy Policy</a>
-            <p class="leading-relaxed mb-4">
-                Prestige City, Bangalore is a premium integrated township on Sarjapur Road offering modern apartments, villas, and plots. 
-                With world-class amenities, landscaped spaces, and excellent connectivity to ORR, Whitefield, and major tech hubs, it 
-                delivers a balanced lifestyle of comfort, convenience, and long-term value within a well-planned urban community.
-            </p>
-            <p class="mt-4">
-                 *T&C Apply. Prices are subject to change without prior notice. This is a conceptual representation.
-            </p>
-        </div>
-    </footer>
 
     <script src="Project.js"></script>
 </body>

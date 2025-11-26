@@ -25,7 +25,7 @@
 @media (max-width: 768px) {
 
     .hero-background {
-        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1764062012/Gemini_Generated_Image_bpeevebpeevebpee_flra7g.png');
+        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1764085347/Gemini_Generated_Image_snle0zsnle0zsnle_hmwkjz.png');
         background-position: top center;    /* so main part stays visible */
         min-height: 100vh;
     background-size: 100% 100%;
@@ -38,7 +38,7 @@
 @media (min-width: 768px) {
     
     .hero-background {
-        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1763993518/Gemini_Generated_Image_qe7pw4qe7pw4qe7p_jwwwks.png');
+        background-image: url('https://res.cloudinary.com/dtgqpj6b0/image/upload/v1764085347/Gemini_Generated_Image_snle0zsnle0zsnle_hmwkjz.png');
         background-size: contain;           
         background-color: #000;
         min-height: 100vh;
@@ -493,6 +493,29 @@ input[type="radio"].form-radio:checked:after {
     flex-shrink: 0;
     scroll-snap-align: start;
 }
+/* Bigger cards on large screens */
+@media (min-width: 1024px) {
+    .floor-card {
+        width: 260px !important;   /* increased size */
+    }
+    .floor-img {
+        height: 180px !important;  /* bigger image height */
+    }
+    .card-content {
+        padding: 14px !important;
+    }
+    .price {
+        font-size: 20px !important;
+    }
+    .size {
+        font-size: 14px !important;
+    }
+    .bhk-btn {
+        font-size: 15px !important;
+        padding: 10px !important;
+    }
+}
+
 
 .floor-img {
     height: 120px;                /* smaller image */
@@ -543,4 +566,93 @@ input[type="radio"].form-radio:checked:after {
     filter: blur(4px);      /* Blur effect added */
     transform: scale(1.05); /* Slight zoom so edges don’t show */
 }
+.dot {
+    transition: all 0.3s ease;
+}
+.dot.active {
+    width: 12px !important;
+    height: 6px !important;
+    border-radius: 10px;
+}
+/* DYNAMIC GALLERY DOTS */
+.gallery-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    width: 22px;
+    height: 8px;
+    background-color: #111;
+    border-radius: 10px;
+}
+/* Responsive containers */
+@media (max-width: 640px) {
+  #offers-registration-section,
+  #about-project-section,
+  .project-footer {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .max-w-3xl {
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+}
+@media (min-width: 640px) {
+  #offers-registration-section,
+  #about-project-section,
+  .project-footer {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+@media (min-width: 1024px) {
+  #offers-registration-section,
+  #about-project-section,
+  .project-footer {
+    padding-left: 8rem !important; /* 128px */
+    padding-right: 8rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  #offers-registration-section,
+  #about-project-section,
+  .project-footer {
+    padding-left: 24rem !important; /* 384px */
+    padding-right: 24rem !important;
+  }
+}
+
+/* Form inputs, button: always 100% width, proper padding on small screens */
+input[type="text"], input[type="tel"], button[type="submit"] {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Footer colors and links */
+.project-footer {
+  background-color: #1a1a1a;
+  color: #d1d5db;
+}
+.project-footer a {
+  color: #d8c282;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.project-footer a:hover {
+  color: #fff;
+}
+.amenity-icon {
+    font-size: 36px;
+    color: #d8c282; /* Prestige Gold */
+    margin-bottom: 8px;
+}
+
+
+
+
 
